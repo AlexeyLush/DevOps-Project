@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_page.css">
+    <title>Purchase Information</title>
+</head>
+<body>
+    <div class="purchase-container">
+        <form class="purchase-form" action="#" method="post">
+            <h2>Add purchases</h2>
+
+            <div class="columns-container">
+                <div class="first_column">
+                    <div class="purchase-section">
+                        <label for="purchase-name">Name of Purchases:</label>
+                        <input type="text" id="purchase-name" name="purchase-name" required>
+                    </div>
+
+                    <div class="purchase-section">
+                        <label for="purchase-date">Date of Purchase:</label>
+                        <input type="text" id="purchase-date" name="purchase-date" pattern="\d{2}.\d{2}.\d{4}" placeholder="dd.mm.yyyy" required>
+                    </div>
+                </div>
+            
+                <div class="second_column">
+                    <div class="purchase-section">
+                        <label for="purchase-cost">Cost of Purchase:</label>
+                        <input type="text" id="purchase-cost" name="purchase-cost" required>
+                    </div>
+
+                    <div class="purchase-section">
+                        <label for="purchase-comment">Comment for Purchase:</label>
+                        <input id="purchase-comment" name="purchase-comment" rows="4"></input>
+                    </div>
+                </div>
+            </div>
+
+            <button id="add_button" type="submit">Add</button>
+        </form>
+
+        <div class="count-buttons">
+            
+            
+            <div class="count-container">
+                <button class="count" id="day_button" type="button" >Calculate Total Sum per Day</button>
+                <div class="count-text" id="perDayResult">You have bought on sum: </div>
+            </div>
+            
+            <div class="count-container">
+                <button class="count" type="button" id="week_button" >Calculate Total Sum per Week</button>
+                <div class="count-text" id="perWeekResult">You have bought on sum: </div>
+            </div>
+            
+            <div class="count-container">
+                <button class="count" id="month_button" type="button" >Calculate Total Sum per Month</button>
+                <div class="count-text" id="perMonthResult">You have bought on sum: </div>
+            </div>
+            
+            <div class="count-container">
+                <button class="count" id="year_button" type="button" >Calculate Total Sum per Year</button>
+                <div class="count-text" id="perYearResult">You have bought on sum: </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="main_page.js" defer></script>
+</body>
+</html>
